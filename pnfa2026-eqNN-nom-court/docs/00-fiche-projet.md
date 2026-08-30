@@ -1,68 +1,76 @@
-# Fiche projet — Équipe NN
+# Fiche projet — Équipe 20
 
 > Livrable L2 · Jalon J1 (samedi 29 août 2026) · validée par l'encadreur référent.
 > Aucune fabrication n'est autorisée avant la validation de ce jalon.
 
 ## 1. Titre et accroche
 
-Nom du dispositif, une phrase pour le présenter à un chef d'établissement.
+Un feu tricolore pour le bruit de la classe, un indicateur de niveau sonore en temps réel pour la salle de classe.
 
 ## 2. Besoin et bénéficiaires
 
-La difficulté d'apprentissage visée · les élèves concernés (discipline, niveau, effectif) ·
-l'établissement d'accueil.
+La difficulté d'apprentissage visé:le bruit lors des séances de cours · pour tous les élèves,disciplines confondues ,tot niveau,effectif:min40 ,tous les etablissements .
 
 ## 3. Objectifs d'apprentissage
 
 Trois objectifs observables rattachés au programme officiel, chapitre cité.
-
-1.
-2.
-3.
+1.Auto-régulation collective
+2.Sensibilisation au bruit
+3.Calibration expérimentale
 
 ## 4. Description du dispositif
 
-Ce que l'objet fait · ce que l'élève fait avec · croquis ou esquisse annotée
-(versée dans `docs/medias/`).
+L'objet régularise le bruit dans la salle de classe· Les élèves ne réalisent pas toujours qu'ils sont bruyants l'objets les permets de s'auto-régulariser.
+ ![croquis](../docs/medias/Capture%20d’écran%202026-08-30%20211911.jpg).
 
 ## 5. Architecture technique pressentie
 
-Capteurs · actionneurs · liaison · application · procédés de fabrication envisagés
-(au moins trois procédés distincts, exigence ET-FAB-02).
+Capteurs:KY-038 — mesure le niveau sonore · actionneurs:Arduino Uno — compare aux seuils· liaison: LED vert/jaune/rouge + buzzer· application:  mBlock (blocs) ou Arduino IDE (C++)
+· procédés de fabrication envisagés: ET-FAB-02.
 
 ## 6. Rôle des élèves
 
-Position sur le continuum POUR / AVEC / PAR et extension PAR décrite (exigence EP-03).
+Gérer plusieurs niveaux de décision, pas juste un seuil unique.
 
 ## 7. Ancrage réseau et implantation
 
-Lab de rattachement (CRIT ou établissement) · lieu d'usage · conditions matérielles de la salle.
+Lab de rattachement: établissement· lieu d'usage:Tous les établissements· conditions matérielles de la salle:Le fils électrique est suffisant.
 
 ## 8. Périmètre
-
-| | Contenu |
+| | Contenu | 
 |---|---|
-| Dans la v1.0 (Socle) | |
-| En option (Avancé / Expert) | |
-| Explicitement exclu | |
+| Dans la v1.0 (Socle)	Capteur sonore KY-038, Arduino Uno, 3 LED (vert/jaune/rouge) selon 2 seuils, alimentation USB, boîtier imprimé en 3D | |
+| En option (Avancé/Expert)	Buzzer d'alerte sonore, écran LCD affichant la valeur en direct, historique des pics sonores dans le temps | |
+| Explicitement exclu	Reconnaissance vocale, distinction entre types de bruit (voix vs objet), application mobile, envoi d'alertes à distance | |
 
 ## 9. Risques et parades
-
 | Risque | Type | Parade |
 |---|---|---|
-| | technique | |
-| | calendrier | |
-| | pédagogique | |
+|  Le capteur KY-038 est sensible aux parasites valeurs instables |	technique |	Lissage par moyenne mobile sur plusieurs lectures ; calibration des seuils en conditions réelles |
+|  cL'imprimante 3D est partagée entre 25 équipes, risque de retard pour le boîtier (V3) |	calendrier|	Réserver un créneau d'impression dès la V2 validée ; prévoir 2-3 jours de marge avant le jalonalendrier | |
+|  Les seuils calibrés en test peuvent ne pas correspondre à une vraie salle pleine d'élèves|	pédagogique|	Tester dans une salle réellement occupée avant la démonstration finale ; ajuster les seuils sur place | |
 
 ## 10. Budget matière estimé
 
-Grandes masses en FCFA, au regard de la dotation (plafond indicatif : 60 000 FCFA).
+Grandes masses en FCFA (plafond 60 000 FCFA) :
 
+Arduino Uno : ~9 000 FCFA
+Capteur KY-038 : ~1 500 FCFA
+3 LED + résistances : ~500 FCFA
+Buzzer : ~1 000 FCFA
+Câbles/breadboard : ~2 000 FCFA
+Filament impression 3D (boîtier) : ~2 500 FCFA
+Divers (colle, vis) : ~1 000 FCFA
+
+Total estimé : ~17 500 FCFA — largement dans le plafond, marge confortable pour imprévu.
 ## 11. Licences et diffusion
 
-Licences choisies et motivation · accord de l'équipe pour la mise en avant réseau.
+Code source : licence MIT — motivation : permettre à d'autres classes/promotions de réutiliser et adapter librement le code
+Documentation, schémas, cahier de projet : licence Creative Commons BY-SA — motivation : partage libre avec obligation de citer l'équipe
+Accord de l'équipe pour la mise en avant réseau : à faire valider par les 4 membres avant dépôt final
 
 ## Exemptions demandées
-
-- [ ] ET-FAB-06 (moulage) — justification :
-- [ ] ET-MEC-01 (fonction motorisée) — justification :
+- [x] ET-FAB-06 (moulage) — justification : le boîtier est réalisé par impression 3D (FDM), 
+      technique suffisante pour loger et protéger l'électronique ; aucune pièce moulée n'est nécessaire au fonctionnement du projet.
+- [x] ET-MEC-01 (fonction motorisée) — justification : le projet est un indicateur visuel et sonore 
+statique (LED + buzzer), sans aucune pièce mobile ni actionnement mécanique requis pour répondre au besoin identifié.

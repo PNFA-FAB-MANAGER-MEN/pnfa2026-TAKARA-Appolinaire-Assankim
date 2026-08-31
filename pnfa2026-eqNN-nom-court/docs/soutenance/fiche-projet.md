@@ -21,7 +21,7 @@ Trois objectifs observables rattachés au programme officiel, chapitre cité.
 ## 4. Description du dispositif
 
 L'objet régularise le bruit dans la salle de classe· Les élèves ne réalisent pas toujours qu'ils sont bruyants l'objets les permets de s'auto-régulariser.
- ![croquis](../docs/medias/Capture%20d’écran%202026-08-30%20211911.jpg).
+ ![croquis](../medias/Capture%20d’écran%202026-08-30%20211911.jpg).
 
 ## 5. Architecture technique pressentie
 
@@ -47,7 +47,7 @@ Lab de rattachement: établissement· lieu d'usage:Tous les établissements· co
 | Risque | Type | Parade |
 |---|---|---|
 |  Le capteur KY-038 est sensible aux parasites valeurs instables |	technique |	Lissage par moyenne mobile sur plusieurs lectures ; calibration des seuils en conditions réelles |
-|  cL'imprimante 3D est partagée entre 25 équipes, risque de retard pour le boîtier (V3) |	calendrier|	Réserver un créneau d'impression dès la V2 validée ; prévoir 2-3 jours de marge avant le jalonalendrier | |
+|  L'imprimante 3D est partagée entre 25 équipes, risque de retard pour le boîtier (V3) |	calendrier|	Réserver un créneau d'impression dès la V2 validée ; prévoir 2-3 jours de marge avant le jalonalendrier | |
 |  Les seuils calibrés en test peuvent ne pas correspondre à une vraie salle pleine d'élèves|	pédagogique|	Tester dans une salle réellement occupée avant la démonstration finale ; ajuster les seuils sur place | |
 
 ## 10. Budget matière estimé

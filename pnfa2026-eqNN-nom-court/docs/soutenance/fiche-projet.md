@@ -5,28 +5,31 @@
 
 ## 1. Titre et accroche
 
-Un feu tricolore pour le bruit de la classe, un indicateur de niveau sonore en temps réel pour la salle de classe.
+Robot éducatif programmable.
 
 ## 2. Besoin et bénéficiaires
 
-La difficulté d'apprentissage visé:le bruit lors des séances de cours · pour tous les élèves,disciplines confondues ,tot niveau,effectif:min40 ,tous les etablissements .
+La difficulté d'apprentissage visée:Facilité la conpréhension des boucles,coditionnement,etc.
 
 ## 3. Objectifs d'apprentissage
 
 Trois objectifs observables rattachés au programme officiel, chapitre cité.
-1.Auto-régulation collective
-2.Sensibilisation au bruit
-3.Calibration expérimentale
+1.Conditionner une action
+2.Programmation en bloc.
+3.Calibration expérimentale.
 
 ## 4. Description du dispositif
 
-L'objet régularise le bruit dans la salle de classe· Les élèves ne réalisent pas toujours qu'ils sont bruyants l'objets les permets de s'auto-régulariser.
- ![croquis](../medias/Capture%20d’écran%202026-08-30%20211911.jpg).
+L'objet est réaliser pour pour faire des actions comme:suivre des lignes par exemple.
 
 ## 5. Architecture technique pressentie
 
-Capteurs:KY-038 — mesure le niveau sonore · actionneurs:Arduino Uno — compare aux seuils· liaison: LED vert/jaune/rouge + buzzer· application:  mBlock (blocs) ou Arduino IDE (C++)
-· procédés de fabrication envisagés: ET-FAB-02.
+- 1 × Arduino Uno (contrôleur)
+- 1 × capteur sonore KY-038 (mesure du niveau sonore)
+- 3 × LED (vert, jaune, rouge)
+- Résistances adaptées aux LED (généralement 220-330 Ω)
+- Câbles de liaison + breadboard
+Alimentation USB
 
 ## 6. Rôle des élèves
 
